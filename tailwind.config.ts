@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss"
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -53,15 +53,17 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Couleurs spécifiques pour SIDI Invest
+        "sidi-blue": "#0047AB", // Bleu principal
+        "sidi-light-blue": "#1E90FF", // Bleu clair
+        "sidi-dark": "#002D62", // Bleu foncé
+        "sidi-gold": "#FFD700", // Or
+        "sidi-light-gold": "#FFDF45", // Or clair
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["var(--font-inter)"],
-        poppins: ["var(--font-poppins)"],
       },
       keyframes: {
         "accordion-down": {
@@ -80,6 +82,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+}
 
 export default config

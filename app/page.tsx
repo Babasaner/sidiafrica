@@ -1,267 +1,391 @@
-import Image from "next/image"
+"use client"
+
 import Link from "next/link"
+import Image from "next/image"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Building2, Users, Globe, TrendingUp, Calendar, MapPin } from "lucide-react"
-import CountUp from "@/components/count-up"
-import NewsCard from "@/components/news-card"
+import { fadeIn, staggerContainer } from "@/lib/motion"
 import PartnerSlider from "@/components/partner-slider"
-import AgendaPreview from "@/components/agenda-preview"
 
 export default function Home() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 hero-gradient text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/bg-pattern.png')] bg-repeat opacity-10"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <Image
-                src="/logo.png"
-                alt="SIDI Invest For Africa"
-                width={300}
-                height={100}
-                className="h-20 w-auto mb-4"
-                priority
-              />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-secondary">SALON</span> <br />
-                SUR LES INVESTISSEMENTS ET LE DÉVELOPPEMENT DES INFRASTRUCTURES EN AFRIQUE
-              </h1>
-              <p className="text-xl md:text-2xl font-light">Développement - Opportunités - Potentiels</p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button asChild size="lg" className="bg-secondary text-primary hover:bg-secondary/90">
-                  <Link href="/participer">PARTICIPER AU SALON</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  <Link href="/a-propos">EN SAVOIR PLUS</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-2xl"></div>
-                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-2xl"></div>
-                <Image
-                  src="/simandou.png"
-                  alt="SIDI Invest For Africa"
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-2xl"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 flex items-center">
-              <Calendar className="text-secondary w-10 h-10 mr-4" />
-              <div>
-                <h3 className="text-xl font-bold">Date</h3>
-                <p className="text-2xl font-bold text-secondary">30.05.25</p>
-              </div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 flex items-center">
-              <MapPin className="text-secondary w-10 h-10 mr-4" />
-              <div>
-                <h3 className="text-xl font-bold">Lieu</h3>
-                <p className="text-lg">Noom Hotel, Conakry, Guinée</p>
-              </div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 flex items-center lg:col-span-1 md:col-span-2">
-              <Globe className="text-secondary w-10 h-10 mr-4" />
-              <div>
-                <h3 className="text-xl font-bold">Pays invités</h3>
-                <p className="text-sm">Sénégal, Bénin, Burkina, Côte d'Ivoire, Gabon, Mali, Niger, RDC...</p>
-              </div>
-            </div>
-          </div>
+      <section className="relative min-h-[90vh] flex items-center bg-blue-900 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/abstract-blue-swirls.png" alt="Background" fill className="object-cover opacity-20" />
         </div>
-      </section>
 
-      {/* Agenda Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mx-auto mb-12">AGENDA DU SALON</h2>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="flex flex-col items-center text-center"
+          >
+            <motion.div variants={fadeIn("up", "tween", 0.1, 1)} className="mb-6">
+              <Image
+                src="/simandou.png"
+                alt="SIDI Invest Guinée"
+                width={300}
+                height={120}
+                className="mx-auto"
+              />
+            </motion.div>
 
-          <AgendaPreview />
+            <motion.h1
+              variants={fadeIn("up", "tween", 0.2, 1)}
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
+            >
+              Salon Guinée Invest
+            </motion.h1>
 
-          <div className="mt-12 text-center">
-            <Button asChild className="bg-primary hover:bg-primary/90">
-              <Link href="/programme">VOIR LE PROGRAMME COMPLET</Link>
-            </Button>
-          </div>
+            <motion.div
+              variants={fadeIn("up", "tween", 0.3, 1)}
+              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl"
+            >
+              <p className="mb-4">Le plus grand salon économique de Guinée en 2025</p>
+              <p className="font-semibold">Investir en Guinée à l'ère du Simandou 2040</p>
+            </motion.div>
+
+            <motion.div variants={fadeIn("up", "tween", 0.4, 1)} className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Button
+                asChild
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold text-lg px-8"
+              >
+                <Link href="/participer">S'inscrire</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 font-semibold text-lg px-8"
+              >
+                <Link href="/programme">Voir le programme</Link>
+              </Button>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn("up", "tween", 0.5, 1)}
+              className="flex items-center justify-center gap-6 text-white"
+            >
+              <div className="text-center">
+                <p className="text-3xl md:text-4xl font-bold">30</p>
+                <p className="text-sm uppercase">Mai 2025</p>
+              </div>
+              <div className="h-12 w-px bg-blue-400"></div>
+              <div className="text-center">
+                <p className="text-3xl md:text-4xl font-bold">300+</p>
+                <p className="text-sm uppercase">Décideurs</p>
+              </div>
+              <div className="h-12 w-px bg-blue-400"></div>
+              <div className="text-center">
+                <p className="text-3xl md:text-4xl font-bold">50</p>
+                <p className="text-sm uppercase">Exposants</p>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">AU SUJET</h2>
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+          >
+            <motion.h2
+              variants={fadeIn("up", "tween", 0.1, 1)}
+              className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center"
+            >
+              À Propos du Salon
+            </motion.h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building2 className="w-8 h-8 text-primary" />
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
+                <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                  <Image src="/apropos.jpg" alt="Salon Guinée Invest" fill className="object-cover" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Infrastructures</h3>
-                <p className="text-gray-600">
-                  Découvrez les projets d'infrastructures majeurs en Afrique et les opportunités d'investissement
-                  associées.
-                </p>
-              </CardContent>
-            </Card>
+              </motion.div>
 
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Investissements</h3>
-                <p className="text-gray-600">
-                  Explorez les différentes opportunités d'investissement dans les secteurs clés du développement
-                  africain.
+              <motion.div variants={fadeIn("left", "tween", 0.2, 1)}>
+                <p className="text-lg text-gray-700 mb-6">
+                  La République de Guinée, riche de ses ressources naturelles, amorce une phase stratégique de son
+                  développement à travers la mise en œuvre du programme Simandou 2040, destiné à transformer le
+                  potentiel minier en moteur de croissance économique durable.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Développement</h3>
-                <p className="text-gray-600">
-                  Contribuez au développement durable du continent africain à travers des projets innovants et
-                  impactants.
+                <p className="text-lg text-gray-700 mb-6">
+                  Ce programme intègre des projets structurants dans les infrastructures ferroviaires, portuaires,
+                  énergétiques et industrielles, positionnant la Guinée comme un pôle économique incontournable en
+                  Afrique de l'Ouest.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Networking</h3>
-                <p className="text-gray-600">
-                  Rencontrez des décideurs, investisseurs et experts du développement africain lors de notre salon.
+                <p className="text-lg text-gray-700 mb-8">
+                  Dans ce contexte, Septafrique, leader de l'événementiel institutionnel en Afrique de l'Ouest, organise
+                  le Salon Guinée Invest, une plateforme de rencontres, d'échanges et de promotion des opportunités
+                  d'investissement, le 30 mai 2025 à l'hôtel NOOM de Conakry.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-16 text-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link href="/a-propos">EN SAVOIR PLUS</Link>
-            </Button>
-          </div>
+                <Button asChild className="bg-blue-700 hover:bg-blue-800">
+                  <Link href="/a-propos">En savoir plus</Link>
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Components Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-bold text-primary">
-                <CountUp end={13} />+
-              </p>
-              <p className="text-gray-600 mt-2">Pays Participants</p>
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+          >
+            <motion.h2
+              variants={fadeIn("up", "tween", 0.1, 1)}
+              className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center"
+            >
+              Composantes du Salon
+            </motion.h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <motion.div
+                variants={fadeIn("up", "spring", 0.2, 0.75)}
+                className="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center"
+              >
+                <div className="w-16 h-16 bg-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold">1</span>
+                </div>
+                <h3 className="text-xl font-bold text-blue-800 mb-3">Conférence Inaugurale</h3>
+                <p className="text-gray-600">
+                  Une session solennelle en présence de hauts responsables gouvernementaux, d'institutions financières,
+                  de diplomates et d'investisseurs.
+                </p>
+              </motion.div>
+
+              <motion.div
+                variants={fadeIn("up", "spring", 0.3, 0.75)}
+                className="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center"
+              >
+                <div className="w-16 h-16 bg-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold">2</span>
+                </div>
+                <h3 className="text-xl font-bold text-blue-800 mb-3">Panels Thématiques</h3>
+                <p className="text-gray-600">
+                  5 panels de haut niveau sur les enjeux stratégiques du développement économique de la Guinée.
+                </p>
+                <Button asChild variant="link" className="mt-4 text-blue-700">
+                  <Link href="/panels">Voir les panels</Link>
+                </Button>
+              </motion.div>
+
+              <motion.div
+                variants={fadeIn("up", "spring", 0.4, 0.75)}
+                className="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center"
+              >
+                <div className="w-16 h-16 bg-blue-700 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold">3</span>
+                </div>
+                <h3 className="text-xl font-bold text-blue-800 mb-3">Exposition Économique</h3>
+                <p className="text-gray-600">
+                  50 entreprises majeures présenteront leurs projets, technologies et solutions, avec une zone B2B
+                  dédiée aux rencontres d'affaires.
+                </p>
+              </motion.div>
             </div>
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-bold text-primary">
-                <CountUp end={500} />+
-              </p>
-              <p className="text-gray-600 mt-2">Participants</p>
-            </div>
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-bold text-primary">
-                <CountUp end={50} />+
-              </p>
-              <p className="text-gray-600 mt-2">Intervenants</p>
-            </div>
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-bold text-primary">
-                <CountUp end={100} />+
-              </p>
-              <p className="text-gray-600 mt-2">Projets Présentés</p>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* News Section */}
-      <section className="py-16 md:py-24">
+      {/* Results Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">ACTUALITÉS</h2>
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+          >
+            <motion.h2
+              variants={fadeIn("up", "tween", 0.1, 1)}
+              className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center"
+            >
+              Résultats Attendus
+            </motion.h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <NewsCard
-              title="Lancement du Salon SIDI Invest For Africa 2024"
-              excerpt="Le salon SIDI Invest For Africa se tiendra les 4 et 5 octobre 2024 à la Bibliothèque François Mitterrand de Paris."
-              date="15 Mai 2024"
-              image="https://sidinvest.africa/wp-content/uploads/2024/09/favicon-1.jpg"
-              slug="/actualites/lancement-salon-2024"
-            />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <motion.div
+                variants={fadeIn("up", "spring", 0.2, 0.75)}
+                className="bg-blue-50 p-6 rounded-xl border border-blue-100 h-full"
+              >
+                <div className="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-blue-800 mb-2">Valorisation des projets</h3>
+                <p className="text-gray-600">Valorisation des projets structurants en Guinée</p>
+              </motion.div>
 
-            <NewsCard
-              title="SIDI 2021"
-              excerpt="SIDI Paris 2021 : Spéciale émission Sama Keur consacrée à l’événement "
-              date="10 Mai 2024"
-              image="https://sidinvest.africa/wp-content/uploads/2024/09/Banner.jpg"
-              slug="/actualites/opportunites-investissement"
-            />
+              <motion.div
+                variants={fadeIn("up", "spring", 0.3, 0.75)}
+                className="bg-blue-50 p-6 rounded-xl border border-blue-100 h-full"
+              >
+                <div className="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-blue-800 mb-2">Mobilisation d'investissements</h3>
+                <p className="text-gray-600">Mobilisation d'investissements et de nouveaux partenaires économiques</p>
+              </motion.div>
 
-            <NewsCard
-              title="Africa Bloom"
-              excerpt="Africa Bloom Corporate expose son ambitieux programme au service du développement de l'immobilier."
-              date="5 Mai 2024"
-              image="https://sidinvest.africa/wp-content/uploads/2022/11/IMG-20211219-WA0055-ptwr8xgq161v6psiew05bvjqsj6bi93jcta36ch9vi.jpeg"
-              slug="/actualites/partenariat-bad"
-            />
-          </div>
+              <motion.div
+                variants={fadeIn("up", "spring", 0.4, 0.75)}
+                className="bg-blue-50 p-6 rounded-xl border border-blue-100 h-full"
+              >
+                <div className="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-blue-800 mb-2">Visibilité des entreprises</h3>
+                <p className="text-gray-600">Renforcement de la visibilité des entreprises guinéennes</p>
+              </motion.div>
 
-          <div className="mt-12 text-center">
-            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/5">
-              <Link href="/actualites">VOIR TOUTES LES ACTUALITÉS</Link>
-            </Button>
-          </div>
+              <motion.div
+                variants={fadeIn("up", "spring", 0.5, 0.75)}
+                className="bg-blue-50 p-6 rounded-xl border border-blue-100 h-full"
+              >
+                <div className="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-blue-800 mb-2">Partenariats stratégiques</h3>
+                <p className="text-gray-600">Signature de protocoles d'accord et de partenariats stratégiques</p>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Partners Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">NOS PARTENAIRES</h2>
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+          >
+            <motion.h2
+              variants={fadeIn("up", "tween", 0.1, 1)}
+              className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center"
+            >
+              Nos Partenaires
+            </motion.h2>
 
-          <PartnerSlider />
+            <motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="mb-12">
+              <PartnerSlider />
+            </motion.div>
 
-          <div className="mt-12 text-center">
-            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/5">
-              <Link href="/partenaires">VOIR TOUS NOS PARTENAIRES</Link>
-            </Button>
-          </div>
+            <motion.div variants={fadeIn("up", "tween", 0.3, 1)} className="text-center">
+              <Button asChild className="bg-blue-700 hover:bg-blue-800">
+                <Link href="/partenaires">Tous nos partenaires</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Participez au Forum Économique International de Guinée - Simandou 2040
-          </h2>
-          <p className="text-xl md:max-w-2xl mx-auto mb-8">
-            Rejoignez-nous le 30 mai 2025 au Noom Hotel de Conakry pour découvrir les opportunités d'investissement dans
-            l'ère Simandou 2040
-          </p>
-          <Button asChild size="lg" className="bg-secondary text-primary hover:bg-secondary/90">
-            <Link href="/participer">PARTICIPER AU SALON</Link>
-          </Button>
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <motion.h2 variants={fadeIn("up", "tween", 0.1, 1)} className="text-3xl md:text-4xl font-bold mb-6">
+              Rejoignez le plus grand salon économique de Guinée en 2025
+            </motion.h2>
+
+            <motion.p variants={fadeIn("up", "tween", 0.2, 1)} className="text-xl text-blue-100 mb-8">
+              Inscrivez-vous dès maintenant pour participer à cet événement majeur et découvrir les opportunités
+              d'investissement en Guinée.
+            </motion.p>
+
+            <motion.div
+              variants={fadeIn("up", "tween", 0.3, 1)}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold text-lg px-8"
+              >
+                <Link href="/participer">S'inscrire</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 font-semibold text-lg px-8"
+              >
+                <Link href="/sponsors">Devenir sponsor</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
-    </>
+    </main>
   )
 }

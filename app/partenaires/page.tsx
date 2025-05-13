@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Handshake, Building, Globe, Newspaper, Award, Users } from "lucide-react"
+import { Building, Globe, Newspaper, Award, Users } from "lucide-react"
 import PartnerCard from "@/components/partner-card"
 import PartnerTestimonial from "@/components/partner-testimonial"
 
@@ -292,7 +292,7 @@ export default function PartnersPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 mr-3">
-                      <Handshake className="h-3 w-3 text-primary" />
+                      <Users className="h-3 w-3 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-bold">Opportunités de collaboration</h3>

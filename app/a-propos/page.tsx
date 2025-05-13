@@ -1,275 +1,178 @@
+"use client"
+
+import { motion } from "framer-motion"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Building2, Users, Globe, TrendingUp } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { fadeIn, staggerContainer } from "@/lib/motion"
+import OrganizerInfo from "@/components/organizer-info"
+import TargetAudience from "@/components/target-audience"
+import CommunicationInfo from "@/components/communication-info"
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-24 bg-primary text-white relative">
-        <div className="absolute inset-0 bg-[url('/bg-pattern.png')] bg-repeat opacity-10"></div>
+      <section className="relative py-20 bg-blue-900 text-white">
+        <div className="absolute inset-0 z-0">
+          <Image src="/bg-pattern.png" alt="Background" fill className="object-cover opacity-20" />
+        </div>
+
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <Image
-                src="/logo-white.png"
-                alt="SIDI Invest For Africa"
-                width={300}
-                height={100}
-                className="h-20 w-auto mb-8"
-              />
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                FORUM <br />
-                <span className="text-secondary">ÉCONOMIQUE INTERNATIONAL DE GUINÉE - SIMANDOU 2040</span>
-              </h1>
-              <p className="text-xl mb-8">Guinée, Terre d'Avenir – Investir dans l'ère Simandou 2040</p>
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <motion.h1 variants={fadeIn("up", "tween", 0.1, 1)} className="text-4xl md:text-5xl font-bold mb-6">
+              À Propos du Salon
+            </motion.h1>
 
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div>
-                  <h3 className="text-secondary font-bold mb-2">Date</h3>
-                  <p className="text-2xl font-bold">30.05.25</p>
-                </div>
-                <div>
-                  <h3 className="text-secondary font-bold mb-2">Lieu</h3>
-                  <p className="text-xl">NOOM HOTEL, CONAKRY, GUINÉE</p>
-                </div>
-              </div>
+            <motion.p variants={fadeIn("up", "tween", 0.2, 1)} className="text-xl text-blue-100">
+              SIDI – Guinée Invest est le plus grand salon économique prévu en 2025 en République de Guinée.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
 
-              <div>
-                <h3 className="text-secondary font-bold mb-2">Pays invités</h3>
-                <p className="text-sm">
-                  Sénégal - Bénin - Burkina - Côte d'Ivoire - Gabon - Mali - Niger - République du Congo - RDC - Rwanda
-                  - Tchad - Togo - Cameroun
+      {/* Main Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+          >
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
+                <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                  <Image src="/simandou_logo.png" alt="Projet Simandou" fill className="object-contain" />
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeIn("left", "tween", 0.2, 1)}>
+                <h2 className="text-2xl font-bold text-blue-900 mb-4">Contexte et Justification</h2>
+                <p className="text-gray-700 mb-4">
+                  La République de Guinée, riche de ses ressources naturelles, amorce une phase stratégique de son
+                  développement à travers la mise en œuvre du programme Simandou 2040, destiné à transformer le
+                  potentiel minier en moteur de croissance économique durable.
+                </p>
+                <p className="text-gray-700 mb-4">
+                  Ce programme intègre des projets structurants dans les infrastructures ferroviaires, portuaires,
+                  énergétiques et industrielles, positionnant la Guinée comme un pôle économique incontournable en
+                  Afrique de l'Ouest.
+                </p>
+                <p className="text-gray-700">
+                  Dans ce contexte, Septafrique, leader de l'événementiel institutionnel en Afrique de l'Ouest, organise
+                  le Salon Guinée Invest, une plateforme de rencontres, d'échanges et de promotion des opportunités
+                  d'investissement, le 30 mai 2025 à l'hôtel NOOM de Conakry.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.div variants={fadeIn("up", "tween", 0.3, 1)} className="mb-16">
+              <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Thématique Centrale</h2>
+              <div className="bg-blue-50 p-8 rounded-xl border border-blue-100 max-w-3xl mx-auto text-center">
+                <h3 className="text-2xl font-bold text-blue-800 mb-4">"Investir en Guinée à l'ère du Simandou 2040"</h3>
+                <p className="text-gray-700">
+                  Cette thématique met en avant l'impact structurant du projet Simandou et les opportunités économiques
+                  connexes, en lien avec les politiques publiques, les réformes et l'environnement des affaires en
+                  Guinée.
                 </p>
               </div>
-            </div>
-            <div className="relative hidden md:block">
-              <Image
-                src="/simandou.png"
-                alt="SIDI Invest For Africa"
-                width={500}
-                height={500}
-                className="rounded-lg"
-              />
-            </div>
-          </div>
+            </motion.div>
+
+            <motion.div variants={fadeIn("up", "tween", 0.4, 1)} className="mb-16 text-center">
+              <h2 className="text-2xl font-bold text-blue-900 mb-6">Un Rendez-vous Majeur pour la Guinée de Demain</h2>
+              <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+                Cet événement stratégique met en lumière les grandes ambitions du pays autour de la mise en œuvre du
+                programme Simandou 2040, véritable levier de transformation économique.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                  <div className="text-3xl font-bold text-blue-700 mb-2">300+</div>
+                  <p className="text-gray-600">
+                    Décideurs nationaux et internationaux (ministres, investisseurs, dirigeants d'entreprises,
+                    bailleurs, diplomates...)
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                  <div className="text-3xl font-bold text-blue-700 mb-2">50</div>
+                  <p className="text-gray-600">
+                    Entreprises exposantes issues des secteurs : mines, BTP, énergie, logistique, industrie, finance,
+                    TIC...
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                  <div className="text-3xl font-bold text-blue-700 mb-2">5</div>
+                  <p className="text-gray-600">
+                    Panels de haut niveau, une conférence inaugurale, une exposition B2B, et des rencontres exclusives.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeIn("up", "tween", 0.5, 1)} className="mb-16">
+              <OrganizerInfo />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* About Content */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mx-auto mb-16">AU SUJET</h2>
+      {/* Target Audience Section */}
+      <TargetAudience />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Building2 className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">INFRASTRUCTURES</h3>
-              <p className="text-gray-600">
-                Le Forum Économique International de Guinée met en lumière les projets d'infrastructures stratégiques
-                pour le développement du continent africain. Découvrez les opportunités dans les secteurs des
-                transports, de l'énergie, des télécommunications et des infrastructures urbaines.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">INVESTISSEMENTS</h3>
-              <p className="text-gray-600">
-                Notre forum facilite la rencontre entre les porteurs de projets africains et les investisseurs
-                internationaux. Nous offrons une plateforme unique pour identifier les opportunités d'investissement les
-                plus prometteuses et établir des partenariats stratégiques.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Globe className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">DÉVELOPPEMENT</h3>
-              <p className="text-gray-600">
-                Notre mission est de contribuer au développement économique et social de l'Afrique à travers la
-                promotion des investissements dans les infrastructures. Nous croyons fermement que des infrastructures
-                de qualité sont essentielles pour la croissance inclusive et durable du continent.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">NETWORKING</h3>
-              <p className="text-gray-600">
-                Le Forum Économique International de Guinée réunit des décideurs politiques, des investisseurs, des
-                experts et des entrepreneurs pour favoriser les échanges et les collaborations. Notre forum est
-                l'occasion idéale pour élargir votre réseau professionnel et nouer des contacts de qualité.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="section-title">NOTRE MISSION</h2>
-              <p className="text-gray-700 mb-6">
-                Le Forum Économique International de Guinée a été créé avec une vision claire : faciliter et accélérer
-                le développement des infrastructures en Afrique en connectant les investisseurs internationaux avec les
-                projets et opportunités du continent.
-              </p>
-              <p className="text-gray-700 mb-6">
-                Notre mission est de créer une plateforme dynamique où les décideurs politiques, les investisseurs, les
-                experts et les entrepreneurs peuvent se rencontrer, échanger et collaborer pour transformer le paysage
-                infrastructurel africain.
-              </p>
-              <p className="text-gray-700">
-                Nous croyons fermement que le développement des infrastructures est la clé de la croissance économique
-                et du progrès social en Afrique. C'est pourquoi nous nous engageons à mettre en lumière les projets les
-                plus prometteurs et à faciliter leur financement et leur mise en œuvre.
-              </p>
-            </div>
-            <div className="relative">
-              <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-2xl"></div>
-              <Image
-                src="/about-image.png"
-                alt="SIDI Invest For Africa Mission"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-
-          <div className="mt-24 grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 relative">
-              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl"></div>
-              <Image
-                src="/about-image-2.png"
-                alt="SIDI Invest For Africa Vision"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="section-title">NOTRE VISION</h2>
-              <p className="text-gray-700 mb-6">
-                Notre vision est de devenir le forum de référence pour les investissements en infrastructures en
-                Afrique, reconnu pour son impact concret sur le développement du continent.
-              </p>
-              <p className="text-gray-700 mb-6">
-                Nous aspirons à créer un écosystème où les projets d'infrastructure africains peuvent être présentés,
-                évalués et financés de manière efficace et transparente, contribuant ainsi à combler le déficit
-                d'infrastructures du continent.
-              </p>
-              <p className="text-gray-700">
-                À long terme, nous visons à faciliter la réalisation de projets d'infrastructure transformateurs qui
-                amélioreront la qualité de vie des populations africaines, stimuleront la croissance économique et
-                favoriseront l'intégration régionale.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Objectives Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mx-auto mb-16">NOS OBJECTIFS</h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-6 font-bold text-xl">
-                1
-              </div>
-              <h3 className="text-xl font-bold mb-4">Promouvoir les opportunités d'investissement</h3>
-              <p className="text-gray-600">
-                Mettre en lumière les projets d'infrastructure à fort potentiel en Afrique et les présenter aux
-                investisseurs internationaux.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-6 font-bold text-xl">
-                2
-              </div>
-              <h3 className="text-xl font-bold mb-4">Faciliter les partenariats public-privé</h3>
-              <p className="text-gray-600">
-                Encourager la collaboration entre les secteurs public et privé pour le développement et le financement
-                des infrastructures en Afrique.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-6 font-bold text-xl">
-                3
-              </div>
-              <h3 className="text-xl font-bold mb-4">Renforcer les capacités locales</h3>
-              <p className="text-gray-600">
-                Contribuer au transfert de connaissances et de technologies pour renforcer les compétences locales dans
-                le domaine des infrastructures.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-6 font-bold text-xl">
-                4
-              </div>
-              <h3 className="text-xl font-bold mb-4">Promouvoir les solutions durables</h3>
-              <p className="text-gray-600">
-                Encourager le développement d'infrastructures respectueuses de l'environnement et adaptées aux défis du
-                changement climatique.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-6 font-bold text-xl">
-                5
-              </div>
-              <h3 className="text-xl font-bold mb-4">Favoriser l'intégration régionale</h3>
-              <p className="text-gray-600">
-                Soutenir les projets d'infrastructure transfrontaliers qui contribuent à l'intégration économique et à
-                la coopération entre les pays africains.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-6 font-bold text-xl">
-                6
-              </div>
-              <h3 className="text-xl font-bold mb-4">Améliorer l'accès aux services essentiels</h3>
-              <p className="text-gray-600">
-                Contribuer à l'amélioration de l'accès aux services essentiels (eau, électricité, transport,
-                télécommunications) pour les populations africaines.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Communication Section */}
+      <CommunicationInfo />
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Rejoignez-nous pour façonner l'avenir des infrastructures en Afrique
-          </h2>
-          <p className="text-xl md:max-w-2xl mx-auto mb-8">
-            Participez au Forum Économique International de Guinée - Simandou 2040 au Noom Hotel de Conakry et
-            contribuez au développement du continent
-          </p>
-          <Button asChild size="lg" className="bg-secondary text-primary hover:bg-secondary/90">
-            <Link href="/participer">PARTICIPER AU FORUM</Link>
-          </Button>
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <motion.h2 variants={fadeIn("up", "tween", 0.1, 1)} className="text-3xl font-bold mb-6">
+              Participez à cet événement majeur
+            </motion.h2>
+
+            <motion.p variants={fadeIn("up", "tween", 0.2, 1)} className="text-xl text-blue-100 mb-8">
+              Inscrivez-vous dès maintenant pour découvrir les opportunités d'investissement en Guinée à l'ère du
+              Simandou 2040.
+            </motion.p>
+
+            <motion.div
+              variants={fadeIn("up", "tween", 0.3, 1)}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold text-lg px-8"
+              >
+                <Link href="/participer">S'inscrire</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 font-semibold text-lg px-8"
+              >
+                <Link href="/contact">Nous contacter</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
-    </>
+    </div>
   )
 }

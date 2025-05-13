@@ -3,21 +3,29 @@
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { motion, useAnimation, useInView } from "framer-motion"
 
 const partners = [
-  { id: 1, name: "Partenaire 1", logo: "https://simandou2040.gn/wp-content/uploads/2024/11/2-1.jpg" },
-  { id: 2, name: "Partenaire 2", logo: "https://simandou2040.gn/wp-content/uploads/2024/11/1.jpg" },
-  { id: 3, name: "Partenaire 3", logo: "https://simandou2040.gn/wp-content/uploads/2024/11/3.jpg" },
-  { id: 4, name: "Partenaire 4", logo: "https://simandou2040.gn/wp-content/uploads/2024/11/4.jpg" },
-  { id: 5, name: "Partenaire 5", logo: "https://simandou2040.gn/wp-content/uploads/2024/11/F4F4F4.jpg" },
-  { id: 6, name: "Partenaire 6", logo: "https://simandou2040.gn/wp-content/uploads/2024/11/chinalco-profile-logo.jpg" },
-  { id: 7, name: "Partenaire 7", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-8.png" },
-  { id: 8, name: "Partenaire 8", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-1.png" },
+  { id: 1, name: "Partenaire 1", logo: "/guinée.jpg" },
+  { id: 2, name: "Partenaire 2", logo: "/favicon-1.jpg" },
+  { id: 3, name: "Partenaire 3", logo: "/simandou_logo.png" },
+  { id: 4, name: "Partenaire 4", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-4.png" },
+  { id: 5, name: "Partenaire 5", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-8.png" },
+  { id: 6, name: "Partenaire 6", logo: "septafrique.jpg" },
+  { id: 7, name: "Partenaire 7", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-7.png" },
 ]
 
 export default function PartnerSlider() {
   const [isHovered, setIsHovered] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
+  const controls = useAnimation()
+  const inView = useInView(containerRef, { once: false, amount: 0.3 })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    }
+  }, [controls, inView])
 
   useEffect(() => {
     const container = containerRef.current
@@ -34,20 +42,62 @@ export default function PartnerSlider() {
     cloneItems()
   }, [])
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  }
+
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      animate={controls}
+      variants={containerVariants}
       className="w-full overflow-hidden py-8"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
         ref={containerRef}
-        className={cn("flex items-center gap-8 md:gap-16 animate-marquee", isHovered && "animate-paused")}
+        className={cn(
+          "flex items-center gap-6 md:gap-8 transition-all duration-500",
+          isHovered ? "animate-paused" : "animate-marquee",
+        )}
       >
         {partners.map((partner) => (
-          <div
+          <motion.div
             key={partner.id}
-            className="partner-item flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-lg shadow-md p-4 flex items-center justify-center"
+            variants={itemVariants}
+            className="partner-item flex-shrink-0 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-white rounded-lg shadow-sm p-4 flex items-center justify-center"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+              rotate: [0, 1, -1, 1, 0],
+              transition: {
+                rotate: {
+                  duration: 0.5,
+                  ease: "easeOut",
+                },
+              },
+            }}
           >
             <Image
               src={partner.logo || "/placeholder.svg"}
@@ -56,9 +106,9 @@ export default function PartnerSlider() {
               height={120}
               className="max-w-full max-h-full object-contain"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }

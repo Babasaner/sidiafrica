@@ -1,18 +1,21 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface PanelProps {
-  id: string
+  id?: string
   title: string
-  time: string
-  day: string
-  moderator: string
-  panelists: string[]
+  time?: string
+  day?: string
+  moderator?: string
+  panelists?: string[]
   specialGuest?: string
   description: string
+  icon?: React.ReactNode
 }
 
 interface PanelAccordionProps {
@@ -28,13 +31,18 @@ export default function PanelAccordion({ panel }: PanelAccordionProps) {
         className="w-full p-6 text-left flex justify-between items-center focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div>
-          <h3 className="text-xl font-bold text-primary">{panel.title}</h3>
-          <p className="text-gray-600 mt-1">
-            {panel.day} - {panel.time}
-          </p>
+        <div className="flex items-center gap-4">
+          {panel.icon && <div className="text-sidi-blue">{panel.icon}</div>}
+          <div>
+            <h3 className="text-xl font-bold text-sidi-blue">{panel.title}</h3>
+            {panel.time && panel.day && (
+              <p className="text-gray-600 mt-1">
+                {panel.day} - {panel.time}
+              </p>
+            )}
+          </div>
         </div>
-        {isOpen ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-primary" />}
+        {isOpen ? <ChevronUp className="h-5 w-5 text-sidi-blue" /> : <ChevronDown className="h-5 w-5 text-sidi-blue" />}
       </button>
 
       <div
@@ -46,19 +54,23 @@ export default function PanelAccordion({ panel }: PanelAccordionProps) {
         <div className="p-6 pt-0 border-t border-gray-100">
           <p className="text-gray-700 mb-4">{panel.description}</p>
 
-          <div className="mb-4">
-            <h4 className="font-semibold mb-1">Modérateur:</h4>
-            <p className="text-gray-600">{panel.moderator}</p>
-          </div>
+          {panel.moderator && (
+            <div className="mb-4">
+              <h4 className="font-semibold mb-1">Modérateur:</h4>
+              <p className="text-gray-600">{panel.moderator}</p>
+            </div>
+          )}
 
-          <div className="mb-4">
-            <h4 className="font-semibold mb-1">Panélistes:</h4>
-            <ul className="list-disc pl-5 space-y-1 text-gray-600">
-              {panel.panelists.map((panelist, index) => (
-                <li key={index}>{panelist}</li>
-              ))}
-            </ul>
-          </div>
+          {panel.panelists && panel.panelists.length > 0 && (
+            <div className="mb-4">
+              <h4 className="font-semibold mb-1">Panélistes:</h4>
+              <ul className="list-disc pl-5 space-y-1 text-gray-600">
+                {panel.panelists.map((panelist, index) => (
+                  <li key={index}>{panelist}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {panel.specialGuest && (
             <div>

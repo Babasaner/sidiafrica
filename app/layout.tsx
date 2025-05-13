@@ -15,8 +15,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "SIDI Invest For Africa",
-  description: "Salon sur les investissements et le développement des infrastructures en Afrique",
+  title: "SIDI Invest Guinée | Salon International des Investissements",
+  description:
+    "Salon International des Investissements et du Développement en Guinée - 30 mai 2025 à l'hôtel NOOM de Conakry",
     generator: 'v0.dev'
 }
 
