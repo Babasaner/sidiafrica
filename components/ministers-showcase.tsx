@@ -191,7 +191,7 @@ export default function MinistersShowcase() {
                   size="icon"
                   className="rounded-full border-white/30 text-white hover:bg-white/10 hover:text-white"
                 >
-                  <ChevronLeft className="h-5 w-5" />
+                  <ChevronLeft className="h-5 w-5 text-blue-900" />
                 </Button>
                 <Button
                   onClick={nextMinister}
@@ -199,12 +199,12 @@ export default function MinistersShowcase() {
                   size="icon"
                   className="rounded-full border-white/30 text-white hover:bg-white/10 hover:text-white"
                 >
-                  <ChevronRight className="h-5 w-5" />
+                  <ChevronRight className="h-5 w-5 text-blue-900" />
                 </Button>
               </div>
             </div>
 
-            <div className="mt-8 flex gap-3 overflow-x-auto pb-2 md:w-[24rem] scrollbar-hide">
+            <div className="mt-8 w-[24rem] md:w-auto flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
               {ministers.map((minister, index) => (
                 <button
                   key={minister.id}
