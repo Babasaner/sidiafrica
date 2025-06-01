@@ -204,7 +204,7 @@ export default function MinistersShowcase() {
               </div>
             </div>
 
-            <div className="mt-8 flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+            <div className="mt-8 flex gap-3 overflow-x-auto pb-2 md:w-[24rem] scrollbar-hide">
               {ministers.map((minister, index) => (
                 <button
                   key={minister.id}
