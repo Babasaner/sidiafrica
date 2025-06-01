@@ -42,7 +42,7 @@ export default function InteractiveCalendar() {
     }
   }, [])
 
-  // Date du salon: 28 juin2025
+  // Date du salon: 28 juin 2025
   const eventDate = "2025-05-30"
 
   // Événements du programme

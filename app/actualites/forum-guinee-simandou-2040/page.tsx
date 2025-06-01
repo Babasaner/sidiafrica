@@ -40,10 +40,10 @@ export default function ForumGuineePage() {
               <div className="prose prose-lg max-w-none">
                 <div className="relative h-96 w-full mb-8 rounded-lg overflow-hidden">
                   <Image
-                    src="/news/forum-guinee.jpg"
+                    src="/news/forum-guinee-2025.png"
                     alt="Forum Économique International de Guinée"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
 
@@ -84,7 +84,7 @@ export default function ForumGuineePage() {
                       <Calendar className="w-5 h-5 text-primary mt-1 mr-3" />
                       <div>
                         <p className="font-medium">Date</p>
-                        <p className="text-gray-600">28 juin2025</p>
+                        <p className="text-gray-600">28 juin 2025</p>
                       </div>
                     </div>
                     <div className="flex items-start">
@@ -140,7 +140,7 @@ export default function ForumGuineePage() {
                 <div className="bg-primary text-white p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4">Participez au forum</h3>
                   <p className="mb-6">
-                    Rejoignez-nous le 28 juin2025 au Noom Hotel de Conakry pour découvrir les opportunités
+                    Rejoignez-nous le 28 juin 2025 au Noom Hotel de Conakry pour découvrir les opportunités
                     d'investissement dans l'ère Simandou 2040.
                   </p>
                   <Button asChild className="w-full bg-secondary text-primary hover:bg-secondary/90">

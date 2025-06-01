@@ -77,7 +77,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold">Email</h3>
-                    <p className="text-gray-600">contact@sidinvest.africa</p>
+                    <p className="text-gray-600">hello@sidinvest.africa</p>
+                    <p className="text-gray-600">alamine@sidinvest.africa</p>
                   </div>
                 </div>
 
@@ -87,7 +88,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold">Téléphone</h3>
-                    <p className="text-gray-600">+224 XX XX XX XX</p>
+                    <p className="text-gray-600">+224 624 29 55 64</p>
                   </div>
                 </div>
 

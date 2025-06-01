@@ -134,7 +134,7 @@ export default function ExposantsPage() {
         </div>
       </section>
 
-      {/* Options de stands */}
+      {/* <!-- Options de stands -->
       <section className="py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Options de stands</h2>
@@ -226,7 +226,7 @@ export default function ExposantsPage() {
         </div>
       </section>
 
-      {/* Zone B2B */}
+      <!-- Zone B2B -->
       <section className="py-16 px-4 md:px-8 bg-blue-900 text-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -272,7 +272,7 @@ export default function ExposantsPage() {
                 <Calendar className="text-blue-700 h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-center text-blue-900 mb-2">Date</h3>
-              <p className="text-center text-gray-700">28 juin2025</p>
+              <p className="text-center text-gray-700">28 juin 2025</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
@@ -301,12 +301,14 @@ export default function ExposantsPage() {
             la Guinée et de la région.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+            {/* 
             <Link
               href="/participer"
               className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-md transition-colors"
             >
               Réserver un stand
             </Link>
+            */}
             <Link
               href="/contact"
               className="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-8 rounded-md transition-colors"

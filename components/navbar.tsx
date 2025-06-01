@@ -99,13 +99,13 @@ export default function Navbar() {
             transition={{ duration: 0.5, delay: navItems.length * 0.1 }}
             whileHover={{ scale: 1.05 }}
           >
-            <Button
+            {/* <Button
               asChild
               size="sm"
               className="ml-2 lg:ml-4 bg-sidi-gold text-sidi-dark hover:bg-opacity-90 transition-all duration-300 text-xs lg:text-sm"
             >
               <Link href="/participer">PARTICIPER</Link>
-            </Button>
+            </Button> */}
           </motion.div>
         </nav>
 

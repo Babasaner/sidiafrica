@@ -18,7 +18,7 @@ export default function Simandou2040Page() {
             majeur en Afrique de l'Ouest.
           </p>
           <Button asChild className="bg-sidi-gold text-sidi-dark hover:bg-sidi-gold/90">
-            <Link href="/participer">PARTICIPER AU SALON</Link>
+            <Link href="/contact">PARTICIPER AU SALON</Link>
           </Button>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function Simandou2040Page() {
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-sidi-gold/20 rounded-full blur-2xl"></div>
               <Image
-                src="/simandou-map.png"
+                src="/simandou_logo.png"
                 alt="Carte du projet Simandou"
                 width={600}
                 height={400}
@@ -116,7 +116,7 @@ export default function Simandou2040Page() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <Image
-                src="/mining-operations.png"
+                src="/exploitation-minieres.jpg"
                 alt="Opérations minières à Simandou"
                 width={600}
                 height={400}
@@ -206,7 +206,7 @@ export default function Simandou2040Page() {
             </div>
             <div className="relative">
               <Image
-                src="/railway-construction.png"
+                src="/infrastructures.jpg"
                 alt="Construction du chemin de fer transguinéen"
                 width={600}
                 height={400}
@@ -218,7 +218,7 @@ export default function Simandou2040Page() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative md:order-1 order-2">
               <Image
-                src="/economic-development.png"
+                src="/eco.jpg"
                 alt="Développement économique en Guinée"
                 width={600}
                 height={400}

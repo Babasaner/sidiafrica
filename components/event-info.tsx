@@ -19,7 +19,7 @@ export default function EventInfo() {
         <div className="flex flex-col items-center text-center">
           <Calendar className="w-10 h-10 mb-3" />
           <h3 className="text-xl font-semibold mb-1">Date</h3>
-          <p>28 juin2025</p>
+          <p>28 juin 2025</p>
         </div>
 
         <div className="flex flex-col items-center text-center">

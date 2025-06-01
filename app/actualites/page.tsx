@@ -76,7 +76,7 @@ export default function NewsPage() {
               <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                 <img
-                  src="/news/forum-guinee.jpg"
+                  src="/news/forum-guinee-2025.png"
                   alt="Forum Économique International de Guinée - Simandou 2040"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -88,11 +88,11 @@ export default function NewsPage() {
                     Forum Économique International de Guinée - Simandou 2040
                   </h3>
                   <p className="text-white/80 mb-4 line-clamp-2">
-                    Le Forum Économique International de Guinée se tiendra le 28 juin2025 à Conakry sous le thème
+                    Le Forum Économique International de Guinée se tiendra le 28 juin 2025 à Conakry sous le thème
                     "Guinée, Terre d'Avenir – Investir dans l'ère Simandou 2040".
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-white/70 text-sm">15 Mai 2024</span>
+                    <span className="text-white/70 text-sm">15 Mai 2025</span>
                     <Button asChild size="sm" className="bg-white text-primary hover:bg-white/90">
                       <a href="/actualites/forum-guinee-simandou-2040">Lire la suite</a>
                     </Button>
