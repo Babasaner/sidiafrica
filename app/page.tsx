@@ -6,6 +6,8 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { fadeIn, staggerContainer } from "@/lib/motion"
 import PartnerSlider from "@/components/partner-slider"
+import MinistersShowcase from "@/components/ministers-showcase"
+import HomeBlogSection from "@/components/home-blog-section"
 
 export default function Home() {
   return (
@@ -24,7 +26,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.25 }}
             className="flex flex-col items-center text-center"
           >
-            <motion.div variants={fadeIn("up", "tween", 0.1, 1)} className="mb-6">
+            {/* <motion.div variants={fadeIn("up", "tween", 0.1, 1)} className="mb-6">
               <Image
                 src="/simandou.png"
                 alt="SIDI Invest Guinée"
@@ -32,7 +34,7 @@ export default function Home() {
                 height={120}
                 className="mx-auto"
               />
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1
               variants={fadeIn("up", "tween", 0.2, 1)}
@@ -61,7 +63,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 font-semibold text-lg px-8"
+                className="border-white text-blue-900 hover:bg-white/10 font-semibold text-lg px-8"
               >
                 <Link href="/programme">Voir le programme</Link>
               </Button>
@@ -72,8 +74,8 @@ export default function Home() {
               className="flex items-center justify-center gap-6 text-white"
             >
               <div className="text-center">
-                <p className="text-3xl md:text-4xl font-bold">30</p>
-                <p className="text-sm uppercase">Mai 2025</p>
+                <p className="text-3xl md:text-4xl font-bold">28</p>
+                <p className="text-sm uppercase">Juin 2025</p>
               </div>
               <div className="h-12 w-px bg-blue-400"></div>
               <div className="text-center">
@@ -127,9 +129,9 @@ export default function Home() {
                 <p className="text-lg text-gray-700 mb-8">
                   Dans ce contexte, Septafrique, leader de l'événementiel institutionnel en Afrique de l'Ouest, organise
                   le Salon Guinée Invest, une plateforme de rencontres, d'échanges et de promotion des opportunités
-                  d'investissement, le 30 mai 2025 à l'hôtel NOOM de Conakry.
+                  d'investissement, le 28 juin2025 à l'hôtel NOOM de Conakry.
                 </p>
-                <Button asChild className="bg-blue-700 hover:bg-blue-800">
+                <Button asChild className="bg-blue-700 text-white hover:bg-blue-800">
                   <Link href="/a-propos">En savoir plus</Link>
                 </Button>
               </motion.div>
@@ -137,6 +139,10 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Ministers Showcase Section */}
+      <MinistersShowcase />
+
 
       {/* Components Section */}
       <section className="py-16 bg-gray-50">
@@ -202,6 +208,10 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+       {/* Blog Section */}
+      <HomeBlogSection />
+
 
       {/* Results Section */}
       <section className="py-16 bg-white">
@@ -336,7 +346,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeIn("up", "tween", 0.3, 1)} className="text-center">
-              <Button asChild className="bg-blue-700 hover:bg-blue-800">
+              <Button asChild className="bg-blue-700 text-white hover:bg-blue-800">
                 <Link href="/partenaires">Tous nos partenaires</Link>
               </Button>
             </motion.div>
@@ -378,7 +388,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 font-semibold text-lg px-8"
+                className="border-white text-blue-900 hover:bg-white/10 font-semibold text-lg px-8"
               >
                 <Link href="/sponsors">Devenir sponsor</Link>
               </Button>

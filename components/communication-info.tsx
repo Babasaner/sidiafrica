@@ -38,7 +38,7 @@ export default function CommunicationInfo() {
     },
   ]
 
-  const mediaPartners = ["RFI", "Africa 24", "Jeune Afrique", "RTG"]
+  const mediaPartners = ["La Présidence", "La Primature", "Le Conseil national de Transition", "Le Ministére de l’Economie et des Finances", "Le Ministére du Plan et de la Coopération Internationale", "Le Ministére des Infrastructures et des Travaux Publics", "Le Ministère de l’Industrie et du Commerce" , "La Chambre de Commerce, d’Industrie et d’Artisanat de Guinée (CCIAG)", "La Confédération Générale des Entreprises de Guinée (CGE-GUI)", "La Chambre Nationale d’Agriculture", "La Chambre des Mines de Guinée", "APIP"]
 
   return (
     <motion.section
@@ -72,9 +72,9 @@ export default function CommunicationInfo() {
 
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
-          className="bg-blue-50 p-6 rounded-xl border border-blue-100 max-w-3xl mx-auto"
+          className="bg-blue-50 p-6 rounded-xl border border-blue-100 container mx-auto"
         >
-          <h3 className="text-xl font-bold text-blue-800 mb-4 text-center">Partenaires Médias</h3>
+          <h3 className="text-xl font-bold text-blue-800 mb-4 text-center">Partenaires Institutionnels et Techniques </h3>
           <div className="flex flex-wrap justify-center gap-6">
             {mediaPartners.map((partner, index) => (
               <div key={index} className="bg-white px-6 py-3 rounded-lg shadow-sm font-semibold text-blue-700">

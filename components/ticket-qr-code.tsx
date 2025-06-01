@@ -132,7 +132,7 @@ export default function TicketQRCode({ ticketData }: TicketQRCodeProps) {
             <div className="bg-gray-50 p-4 rounded-md">
               <h4 className="font-bold mb-2">Informations importantes</h4>
               <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Date de l'événement : 30 Mai 2025</li>
+                <li>• Date de l'événement : 28 juin2025</li>
                 <li>• Lieu : Noom Hotel, Conakry, Guinée</li>
                 <li>• Horaires : 9h00 - 18h00</li>
                 <li>• Veuillez présenter ce billet (imprimé ou sur mobile) à l'entrée</li>

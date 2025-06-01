@@ -55,7 +55,7 @@ export default function EventsPage() {
                     <Calendar className="w-5 h-5 text-primary mt-1 mr-3" />
                     <div>
                       <p className="font-medium">Date</p>
-                      <p className="text-gray-600">30 Mai 2025</p>
+                      <p className="text-gray-600">28 juin2025</p>
                     </div>
                   </div>
                   <div className="flex items-start">

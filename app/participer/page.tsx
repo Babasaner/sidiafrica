@@ -89,7 +89,7 @@ export default function ParticipatePage() {
                   <li className="flex items-start">
                     <span className="text-primary font-bold mr-2">•</span>
                     <span>
-                      Les billets sont nominatifs et non remboursables. Ils donnent accès au forum le 30 mai 2025 au
+                      Les billets sont nominatifs et non remboursables. Ils donnent accès au forum le 28 juin2025 au
                       Noom Hotel de Conakry.
                     </span>
                   </li>

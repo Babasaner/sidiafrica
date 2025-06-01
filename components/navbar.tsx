@@ -15,7 +15,7 @@ const navItems = [
   { name: "PROGRAMME", href: "/programme" },
   { name: "SIMANDOU 2040", href: "/simandou-2040" },
   { name: "EXPOSANTS", href: "/exposants" },
-  { name: "SPONSORS", href: "/sponsors" },
+  { name: "ACTUALITES", href: "/actualites" },
   { name: "CONTACT", href: "/contact" },
 ]
 
