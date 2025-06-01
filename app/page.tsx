@@ -57,7 +57,7 @@ export default function Home() {
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold text-lg px-8"
               >
-                <Link href="/participer">S'inscrire</Link>
+                <Link href="/contact">S'inscrire</Link>
               </Button>
               <Button
                 asChild
