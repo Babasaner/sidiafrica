@@ -9,10 +9,15 @@ const partners = [
   { id: 1, name: "Partenaire 1", logo: "/guinée.jpg" },
   { id: 2, name: "Partenaire 2", logo: "/favicon-1.jpg" },
   { id: 3, name: "Partenaire 3", logo: "/simandou_logo.png" },
-  { id: 4, name: "Partenaire 4", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-4.png" },
-  { id: 5, name: "Partenaire 5", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-8.png" },
+  { id: 4, name: "Partenaire 4", logo: "/rfi.png" },
+  { id: 5, name: "Partenaire 5", logo: "/france24.png" },
   { id: 6, name: "Partenaire 6", logo: "septafrique.jpg" },
-  { id: 7, name: "Partenaire 7", logo: "https://sidinvest.africa/wp-content/uploads/2024/09/partenaire-7.png" },
+  { id: 7, name: "Partenaire 7", logo: "/sept.png" },
+  { id: 8, name: "Partenaire 8", logo: "/apip.png" },
+  { id: 9, name: "Partenaire 9", logo: "/ccig.jpeg" },
+  { id: 10, name: "Partenaire 10", logo: "/cge-guinee.png" },
+  { id: 11, name: "Partenaire 11", logo: "/guinne-gouv.png" },
+
 ]
 
 export default function PartnerSlider() {
