@@ -10,34 +10,35 @@ import { staggerContainer, fadeIn } from "@/lib/motion"
 const recentPosts = [
   {
     id: 1,
-    title: "Lancement du Salon SIDI Invest For Africa 2024",
+    title: "Un accord de 32 millions de dollars US signé avec la BAD, des rendez-vous avec la presse et une présence remarquée à la cérémonie de clôture. Le Ministre Mourana Soumah a bouclé une journée chargée et fructueuse à Abidjan.",
     excerpt:
-      "Le salon SIDI Invest For Africa se tiendra les 4 et 5 octobre 2024 à la Bibliothèque François Mitterrand de Paris.",
-    date: "15 Mai 2024",
-    image: "/news-1.png",
-    slug: "/actualites/lancement-salon-2024",
-    category: "Événement",
-  },
-  {
-    id: 2,
-    title: "Les opportunités d'investissement dans les infrastructures en Afrique",
-    excerpt:
-      "Découvrez les secteurs clés et les projets d'infrastructure qui façonnent l'avenir du continent africain.",
-    date: "10 Mai 2024",
-    image: "/news-2.png",
-    slug: "/actualites/opportunites-investissement",
+      "C’est l’une des retombées concluantes et positives de la mission que le Ministre Mourana Soumah a mené dans la capitale ivoirienne… la signature avec la Direction des Opérations du Groupe de la BAD d’un important accord de financement doté d’une enveloppe de 32 millions 500 mille dollars US.",
+    date: "30 Mai 2025",
+    image: "/news/accord.jpg",
+    slug: "/actualites/accord-bad-guinee-conakry",
     category: "Investissement",
   },
   {
-    id: 3,
-    title: "Partenariat stratégique avec la Banque Africaine de Développement",
+    id: 2,
+    title: "La Guinée Conakry « n’exclut pas d’accéder au marché international des capitaux »",
     excerpt:
-      "SIDI Invest For Africa annonce un partenariat stratégique avec la BAD pour soutenir les projets d'infrastructure.",
-    date: "5 Mai 2024",
-    image: "/news-3.png",
-    slug: "/actualites/partenariat-bad",
-    category: "Partenariat",
+      "Mourana Soumah, ministre de l’Économie et des Finances de la Guinée Conakry, a déclaré le 30 mai, lors d’un échange avec des journalistes",
+    date: "10 Mai 2025",
+    image: "/ministre/mourana-soumah.jpg",
+    slug: "/actualites/la-guinee-conakry-exclut-pas-d-acceder-au-marche-international-des-capitaux",
+    category: "Investissement",
   },
+  
+
+  {
+    id: 3,
+    title: "SIDI Paris 2021",
+    excerpt: "Spéciale émission Sama Keur consacrée à l’événement",
+    date: "5 Novembre 2021",
+    image: "news/sidi2021.jpg",
+    slug: "/actualites/sidi-paris-2021",
+    category: "Événement",
+  }
 ]
 
 export default function HomeBlogSection() {

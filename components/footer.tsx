@@ -142,10 +142,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sponsors"
+                  href="/actualites"
                   className="text-gray-300 hover:text-sidi-gold transition-colors text-sm sm:text-base"
                 >
-                  Sponsors
+                  Actualités
                 </Link>
               </li>
               <li>

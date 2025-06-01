@@ -6,119 +6,35 @@ import { Search } from "lucide-react"
 const newsData = [
   {
     id: 1,
-    title: "Lancement du Salon SIDI Invest For Africa 2024",
+    title: "Un accord de 32 millions de dollars US signé avec la BAD, des rendez-vous avec la presse et une présence remarquée à la cérémonie de clôture. Le Ministre Mourana Soumah a bouclé une journée chargée et fructueuse à Abidjan.",
     excerpt:
-      "Le salon SIDI Invest For Africa se tiendra les 4 et 5 octobre 2024 à la Bibliothèque François Mitterrand de Paris.",
-    date: "15 Mai 2024",
-    image: "/news-1.png",
-    slug: "/actualites/lancement-salon-2024",
-    category: "Événement",
-  },
-  {
-    id: 2,
-    title: "Les opportunités d'investissement dans les infrastructures en Afrique",
-    excerpt:
-      "Découvrez les secteurs clés et les projets d'infrastructure qui façonnent l'avenir du continent africain.",
-    date: "10 Mai 2024",
-    image: "/news-2.png",
-    slug: "/actualites/opportunites-investissement",
+      "C’est l’une des retombées concluantes et positives de la mission que le Ministre Mourana Soumah a mené dans la capitale ivoirienne… la signature avec la Direction des Opérations du Groupe de la BAD d’un important accord de financement doté d’une enveloppe de 32 millions 500 mille dollars US.",
+    date: "30 Mai 2025",
+    image: "/news/accord.jpg",
+    slug: "/actualites/accord-bad-guinee-conakry",
     category: "Investissement",
   },
   {
+    id: 2,
+    title: "La Guinée Conakry « n’exclut pas d’accéder au marché international des capitaux »",
+    excerpt:
+      "Mourana Soumah, ministre de l’Économie et des Finances de la Guinée Conakry, a déclaré le 30 mai, lors d’un échange avec des journalistes",
+    date: "10 Mai 2025",
+    image: "/ministre/mourana-soumah.jpg",
+    slug: "/actualites/la-guinee-conakry-exclut-pas-d-acceder-au-marche-international-des-capitaux",
+    category: "Investissement",
+  },
+  
+
+  {
     id: 3,
-    title: "Partenariat stratégique avec la Banque Africaine de Développement",
-    excerpt:
-      "SIDI Invest For Africa annonce un partenariat stratégique avec la BAD pour soutenir les projets d'infrastructure.",
-    date: "5 Mai 2024",
-    image: "/news-3.png",
-    slug: "/actualites/partenariat-bad",
-    category: "Partenariat",
-  },
-  {
-    id: 4,
-    title: "Interview exclusive avec le Ministre des Infrastructures du Sénégal",
-    excerpt:
-      "Le Ministre des Infrastructures du Sénégal partage sa vision pour le développement des infrastructures dans son pays.",
-    date: "1 Mai 2024",
-    image: "/news-4.png",
-    slug: "/actualites/interview-ministre-senegal",
-    category: "Interview",
-  },
-  {
-    id: 5,
-    title: "Les défis du financement des infrastructures en Afrique",
-    excerpt: "Analyse des défis et des solutions pour le financement des projets d'infrastructure en Afrique.",
-    date: "25 Avril 2024",
-    image: "/news-5.png",
-    slug: "/actualites/defis-financement",
-    category: "Finance",
-  },
-  {
-    id: 6,
-    title: "Le rôle des PPP dans le développement des infrastructures africaines",
-    excerpt: "Comment les partenariats public-privé peuvent accélérer le développement des infrastructures en Afrique.",
-    date: "20 Avril 2024",
-    image: "/news-6.png",
-    slug: "/actualites/role-ppp",
-    category: "Partenariat",
-  },
-  {
-    id: 7,
-    title: "Les infrastructures numériques : un levier de croissance pour l'Afrique",
-    excerpt: "L'importance des infrastructures numériques pour la transformation économique de l'Afrique.",
-    date: "15 Avril 2024",
-    image: "/news-7.png",
-    slug: "/actualites/infrastructures-numeriques",
-    category: "Numérique",
-  },
-  {
-    id: 8,
-    title: "SIDI Invest For Africa signe un accord avec la Côte d'Ivoire",
-    excerpt: "Un accord de partenariat a été signé entre SIDI Invest For Africa et le gouvernement ivoirien.",
-    date: "10 Avril 2024",
-    image: "/news-8.png",
-    slug: "/actualites/accord-cote-ivoire",
-    category: "Partenariat",
-  },
-  {
-    id: 9,
-    title: "Les projets d'infrastructure prioritaires pour l'Afrique en 2024",
-    excerpt: "Découvrez les projets d'infrastructure qui seront au cœur du développement africain en 2024.",
-    date: "5 Avril 2024",
-    image: "/news-9.png",
-    slug: "/actualites/projets-prioritaires-2024",
-    category: "Projets",
-  },
-  {
-    id: 10,
-    title: "L'impact des infrastructures sur le développement économique africain",
-    excerpt:
-      "Une étude révèle l'impact significatif des investissements en infrastructures sur la croissance économique en Afrique.",
-    date: "1 Avril 2024",
-    image: "/news-10.png",
-    slug: "/actualites/impact-infrastructures-economie",
-    category: "Économie",
-  },
-  {
-    id: 11,
-    title: "Les innovations technologiques au service des infrastructures africaines",
-    excerpt:
-      "Comment les nouvelles technologies transforment la conception, la construction et la gestion des infrastructures en Afrique.",
-    date: "25 Mars 2024",
-    image: "/news-11.png",
-    slug: "/actualites/innovations-technologiques",
-    category: "Innovation",
-  },
-  {
-    id: 12,
-    title: "Conférence préparatoire du Salon SIDI Invest For Africa à Dakar",
-    excerpt:
-      "Une conférence préparatoire du Salon SIDI Invest For Africa s'est tenue à Dakar avec la participation de nombreux acteurs locaux.",
-    date: "20 Mars 2024",
-    image: "/news-12.png",
-    slug: "/actualites/conference-preparatoire-dakar",
+    title: "SIDI Paris 2021",
+    excerpt: "Spéciale émission Sama Keur consacrée à l’événement",
+    date: "5 Novembre 2021",
+    image: "news/sidi2021.jpg",
+    slug: "/actualites/sidi-paris-2021",
     category: "Événement",
-  },
+  }
 ]
 
 // Catégories d'actualités
@@ -147,37 +63,6 @@ export default function NewsPage() {
             Restez informé des dernières nouvelles concernant SIDI Invest For Africa et le développement des
             infrastructures en Afrique.
           </p>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="relative w-full md:w-auto md:min-w-[300px]">
-              <input
-                type="text"
-                placeholder="Rechercher une actualité..."
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-            </div>
-
-            <div className="w-full md:w-auto overflow-x-auto">
-              <div className="flex space-x-2 min-w-max">
-                {categories.map((category, index) => (
-                  <Button
-                    key={index}
-                    variant={index === 0 ? "default" : "outline"}
-                    size="sm"
-                    className={index === 0 ? "bg-primary" : ""}
-                  >
-                    {category}
-                  </Button>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
