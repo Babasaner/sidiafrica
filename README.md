@@ -33,3 +33,26 @@ Sidinvest aims to:
 
 [https://sidinvest.africa](https://sidinvest.africa)
 
+## 🧱 Project Structure (Simplified)
+
+/app
+/a-propos
+/programme
+/exposants
+/Actualités
+/simandou-2040
+/contact
+/components
+/lib
+/public
+/styles
+
+
+## 🧑‍💻 Developer
+
+Developed by [Elhadji Mamadou Lamine Sané (aka Baba Sané)](https://github.com/Babasaner)  
+Front-end & WordPress integration expert
+
+---
+
+
