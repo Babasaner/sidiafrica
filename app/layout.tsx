@@ -30,9 +30,9 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <body className={`${inter.variable} ${poppins.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Navbar />
+          {/* <Navbar /> */}
           <main>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
           <Toaster />
         </ThemeProvider>
       </body>
