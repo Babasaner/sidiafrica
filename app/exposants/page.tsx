@@ -272,7 +272,7 @@ export default function ExposantsPage() {
                 <Calendar className="text-blue-700 h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-center text-blue-900 mb-2">Date</h3>
-              <p className="text-center text-gray-700">28 juin 2025</p>
+              <p className="text-center text-gray-700">05 juillet 2025</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">

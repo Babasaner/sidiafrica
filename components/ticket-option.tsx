@@ -44,7 +44,7 @@ export default function TicketOption({ title, price, features, isVip, isVvip, on
       <div className="bg-white p-6">
         <div className="text-center mb-4">
           <span className="text-4xl font-bold">{price}€</span>
-          <p className="text-gray-600 mt-1">28 juin 2025</p>
+          <p className="text-gray-600 mt-1">05 juillet 2025</p>
         </div>
 
         <div className="space-y-3 mb-6">

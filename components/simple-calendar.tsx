@@ -25,7 +25,7 @@ export default function SimpleCalendar() {
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Date du salon: 28 juin 2025
+  // Date du salon: 05 juillet 2025
   const eventDate = "2025-05-30"
 
   // Événements du programme
@@ -246,7 +246,7 @@ export default function SimpleCalendar() {
 
       <div className="bg-white p-4 rounded-lg shadow-md">
         <div className="text-center mb-4">
-          <h3 className="text-xl font-bold">Programme du 28 juin 2025</h3>
+          <h3 className="text-xl font-bold">Programme du 05 juillet 2025</h3>
           <p className="text-gray-500">Hôtel NOOM, Conakry</p>
         </div>
 

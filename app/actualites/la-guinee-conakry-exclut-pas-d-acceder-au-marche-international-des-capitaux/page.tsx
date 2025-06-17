@@ -91,7 +91,7 @@ export default function LaguinneExclutPage() {
                 <div className="bg-primary text-white p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4">Participez au forum</h3>
                   <p className="mb-6">
-                    Rejoignez-nous le 28 juin 2025 au Noom Hotel de Conakry pour découvrir les opportunités
+                    Rejoignez-nous le 05 juillet 2025 au Noom Hotel de Conakry pour découvrir les opportunités
                     d'investissement dans l'ère Simandou 2040.
                   </p>
                   <Button asChild className="w-full bg-secondary text-primary hover:bg-secondary/90">

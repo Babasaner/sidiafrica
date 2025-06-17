@@ -50,7 +50,7 @@ export default function Footer() {
               <AnimatedLogo variant="footer" />
             </Link>
             <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
-              Le Salon International des Investissements et du Développement en Guinée - 28 juin 2025 à l'hôtel NOOM de
+              Le Salon International des Investissements et du Développement en Guinée - 05 juillet 2025 à l'hôtel NOOM de
               Conakry.
             </p>
             <div className="flex space-x-4">

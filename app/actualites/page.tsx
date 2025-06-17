@@ -88,7 +88,7 @@ export default function NewsPage() {
                     Forum Économique International de Guinée - Simandou 2040
                   </h3>
                   <p className="text-white/80 mb-4 line-clamp-2">
-                    Le Forum Économique International de Guinée se tiendra le 28 juin 2025 à Conakry sous le thème
+                    Le Forum Économique International de Guinée se tiendra le 05 juillet 2025 à Conakry sous le thème
                     "Guinée, Terre d'Avenir – Investir dans l'ère Simandou 2040".
                   </p>
                   <div className="flex justify-between items-center">
