@@ -189,44 +189,44 @@ export default function ProgrammePage() {
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                         <div className="flex items-center mb-4">
                           <Clock className="w-5 h-5 text-sidi-blue mr-2" />
-                          <span className="text-xl font-bold">Planning</span>
+                          <span className="text-xl font-bold text-sidi-blue">Planning</span>
                         </div>
                         <ul className="space-y-4">
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">09h00</span>
-                            <span>Accueil</span>
+                            <span className="text-black">Accueil</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">10h00</span>
-                            <span>Conférence inaugurale</span>
+                            <span className="text-black">Conférence inaugurale</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">10h30</span>
-                            <span>Panel 1: Simandou 2040</span>
+                            <span className="text-black">Panel 1: Simandou 2040</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">11h30</span>
-                            <span>Panel 2: Infrastructures</span>
+                            <span className="text-black">Panel 2: Infrastructures</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">13h00</span>
-                            <span>Déjeuner networking</span>
+                            <span className="text-black">Déjeuner networking</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">14h00</span>
-                            <span>Panel 3: Financements</span>
+                            <span className="text-black">Panel 3: Financements</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">15h30</span>
-                            <span>Panel 4: Secteur privé</span>
+                            <span className="text-black">Panel 4: Secteur privé</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">17h00</span>
-                            <span>Panel 5: Zones industrielles</span>
+                            <span className="text-black">Panel 5: Zones industrielles</span>
                           </li>
                           <li className="flex">
                             <span className="font-bold text-sidi-blue w-16">18h30</span>
-                            <span>Cocktail de clôture</span>
+                            <span className="text-black">Cocktail de clôture</span>
                           </li>
                         </ul>
                       </div>
@@ -238,7 +238,7 @@ export default function ProgrammePage() {
                         </div>
                         <ul className="space-y-4">
                           <li>
-                            <p className="font-bold">S.E.M. Amadou Oury BA</p>
+                            <p className="font-bold text-sidi-blue">S.E.M. Amadou Oury BA</p>
                             <p className="text-gray-600 text-sm">Premier Ministre de la République de Guinée</p>
                           </li>
                         </ul>
