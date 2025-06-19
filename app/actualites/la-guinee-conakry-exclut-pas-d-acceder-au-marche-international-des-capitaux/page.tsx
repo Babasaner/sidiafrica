@@ -47,36 +47,36 @@ export default function LaguinneExclutPage() {
                   />
                 </div>
 
-                <h2><strong>La Guinée Conakry « n’exclut pas d’accéder au marché international des capitaux »</strong> </h2>
-                <p>
+                <h2 className="text-black"><strong>La Guinée Conakry « n’exclut pas d’accéder au marché international des capitaux »</strong> </h2>
+                <p className="text-black">
                   (Agence Ecofin) - Le pays ouest africain a une marge d’endettement confortable, et son projet de Simandou, l’un des plus important au monde dans le secteur du fer, lui garantit une augmentation des revenus en devises. A ce titre, sous certaines conditions, il pourrait accéder aux capitaux internationaux.
-                </p>
+                </p >
 
-                <p>
+                <p className="text-black">
                   Mourana Soumah, ministre de l’Économie et des Finances de la Guinée Conakry, a déclaré le 30 mai, lors d’un échange avec des journalistes en marge des Assemblées annuelles de la Banque africaine de développement, que son pays n’excluait pas d’aller sur le marché international des capitaux pour mobiliser des ressources. Cependant, il doit d’abord remplir certaines conditions essentielles en cours d’achèvement.
                 </p>
 
-                <p>
+                <p className="text-black">
                   « L’accès aux marchés des capitaux exige des prérequis, comme l’obtention d’une notation de crédit et à cela nous ajoutons la nécessité de créer un fonds souverain. Nous sommes très avancés dans le processus de notation du pays, et le fonds souverain est en cours de mise en place », a expliqué Mourana Soumah.
                 </p>
 
-                <p>
+                <p className="text-black">
                   La Guinée Conakry affiche un ratio dette/PIB de 40,2 % (contre une moyenne africaine de 58%), dont seulement 19,8 % est détenu par des créanciers étrangers, principalement sous forme de prêts concessionnels. Avec le développement du projet d’exploitation de fer à Simandou, considéré comme l’un des plus importants au monde, le pays anticipe une augmentation de ses revenus extérieurs.
                 </p>
 
-                <p>
+                <p className="text-black">
                   Mobiliser ces ressources permettrait au pays de réduire ses défis en matière d’infrastructures et de répondre aux attentes croissantes de sa population.
                 </p>
 
-                <p>
+                <p className="text-black">
                   En attendant de pouvoir accéder aux marchés internationaux des capitaux, la Guinée s’appuie sur deux leviers principaux. D’une part, il encourage fermement les opérateurs miniers à respecter leurs engagements d’investissement prévus dans les conventions minières qui leur permettent d’opérer. D’autre part, il travaille à devenir éligible à des financements plus importants, bien que moins concessionnels, auprès d’institutions comme la Banque africaine de développement ou la Banque mondiale.
                 </p>
 
-                <p>
+                <p className="text-black">
                   Comme pour de nombreux pays, notamment en Afrique subsaharienne, l’accès aux marchés internationaux des capitaux peut être très exigeant pour les émetteurs souverains africains. Depuis le début de l’année 2025, seuls sept pays africains ont emprunté sur le marché international des titres publics, à travers douze opérations. Le Maroc, cité en exemple par le ministre guinéen, bénéficie du coût le plus bas pour sa dette, avec un rendement à l’émission de 3,8 %, contre 10,6 % pour l’Angola.
                 </p>
 
-                <p>
+                <p className="text-black">
                   Il sera intéressant d’observer l’accueil que les investisseurs réserveront à la Guinée Conakry si elle décide finalement de faire son entrée sur le marché international des capitaux.
                 </p>
 
@@ -89,7 +89,7 @@ export default function LaguinneExclutPage() {
                 
 
                 <div className="bg-primary text-white p-6 rounded-lg">
-                  <h3 className="text-xl font-bold mb-4">Participez au forum</h3>
+                  <h3 className="text-xl  font-bold mb-4">Participez au forum</h3>
                   <p className="mb-6">
                     Rejoignez-nous le 12 juillet 2025 au Noom Hotel de Conakry pour découvrir les opportunités
                     d'investissement dans l'ère Simandou 2040.

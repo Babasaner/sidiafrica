@@ -173,7 +173,7 @@ export default function MinistersShowcase() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-sm p-8 rounded-xl mb-8"
+              className="bg-white/10 backdrop-blur-sm overflow-hidden height-full  p-8 rounded-xl mb-8"
             >
               <h3 className="text-2xl font-bold mb-4">Biographie</h3>
               <p className="text-lg text-blue-100 mb-6">{activeMinister.bio}</p>

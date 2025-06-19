@@ -47,37 +47,37 @@ export default function ForumGuineePage() {
                   />
                 </div>
 
-                <h2>Un nouveau forum économique d'envergure internationale</h2>
-                <p>
+                <h2 className="text-black">Un nouveau forum économique d'envergure internationale</h2>
+                <p className="text-black">
                   Nous sommes heureux d'annoncer l'organisation prochaine du Forum Économique International de Guinée,
                   sous le thème <strong>"Guinée, Terre d'Avenir – Investir dans l'ère Simandou 2040"</strong>.
                 </p>
 
-                <p>
+                <p className="text-black">
                   Cet événement d'envergure, placé sous la haute présidence de Son Excellence Monsieur Amadou Oury BA,
                   Premier Ministre de la République de Guinée, réunira à Conakry plus de 300 invités, dont des
                   représentants de gouvernements, d'institutions financières internationales, des investisseurs, ainsi
                   que 50 entreprises exposantes venues de divers horizons.
                 </p>
 
-                <p>
+                <p className="text-black">
                   Il s'agira d'une plateforme de dialogue stratégique et de promotion des opportunités d'investissement
                   autour du projet Simandou et de ses impacts sur l'économie nationale.
                 </p>
 
-                <h2>Objectifs du forum</h2>
-                <p>
+                <h2 className="text-black">Objectifs du forum</h2>
+                <p className="text-black">
                   Organisé par Septafrique, structure panafricaine reconnue pour son expertise dans l'organisation
                   d'événements institutionnels à fort impact, ce forum vise à :
                 </p>
 
-                <ul>
+                <ul className="text-black">
                   <li>Mobiliser le secteur privé guinéen et international</li>
                   <li>Favoriser les partenariats public-privé</li>
                   <li>Contribuer à la visibilité internationale du programme Simandou 2040</li>
                 </ul>
 
-                <h2>Informations pratiques</h2>
+                <h2 className="text-black">Informations pratiques</h2>
                 <div className="bg-gray-50 p-6 rounded-lg my-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-start">
@@ -104,7 +104,7 @@ export default function ForumGuineePage() {
                   </div>
                 </div>
 
-                <p>
+                <p className="text-black">
                   Le Forum Économique International de Guinée - Simandou 2040 s'inscrit dans le cadre de
                   l'accompagnement des grandes ambitions économiques portées par la République de Guinée, notamment à
                   travers la mise en œuvre du programme stratégique Simandou 2040.
@@ -155,3 +155,4 @@ export default function ForumGuineePage() {
     </>
   )
 }
+
