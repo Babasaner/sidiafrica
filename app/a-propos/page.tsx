@@ -68,7 +68,7 @@ export default function AboutPage() {
                 <p className="text-gray-700">
                   Dans ce contexte, Septafrique, leader de l'événementiel institutionnel en Afrique de l'Ouest, organise
                   le Salon Guinée Invest, une plateforme de rencontres, d'échanges et de promotion des opportunités
-                  d'investissement, le 05 juillet 2025 à l'hôtel NOOM de Conakry.
+                  d'investissement, le 12 juillet 2025 à l'hôtel NOOM de Conakry.
                 </p>
               </motion.div>
             </div>
@@ -146,8 +146,7 @@ export default function AboutPage() {
             </motion.h2>
 
             <motion.p variants={fadeIn("up", "tween", 0.2, 1)} className="text-xl text-blue-100 mb-8">
-              Inscrivez-vous dès maintenant pour découvrir les opportunités d'investissement en Guinée à l'ère du
-              Simandou 2040.
+              Inscrivez-vous dès maintenant pour découvrir les opportunités d'investissement en Guinée, terre d'opportunités et d'avenir.
             </motion.p>
 
             <motion.div

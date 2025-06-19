@@ -17,7 +17,7 @@ export default function ProgrammePage() {
         "Ce panel explorera l'impact structurant du projet Simandou sur l'économie guinéenne et les opportunités de développement qu'il génère dans différents secteurs.",
       icon: <LineChart className="w-12 h-12" />,
       time: "10h30",
-      day: "05 juillet 2025",
+      day: "12 juillet 2025",
       moderator: "Expert du secteur minier",
       panelists: [
         "Représentant du Ministère des Mines",
@@ -31,7 +31,7 @@ export default function ProgrammePage() {
       description: "Discussion sur les projets d'infrastructures ferroviaires, portuaires et routières",
       icon: <Building2 className="w-12 h-12" />,
       time: "11h30",
-      day: "05 juillet 2025",
+      day: "12 juillet 2025",
       moderator: "Expert en infrastructures",
       panelists: ["Ministre des Infrastructures", "Directeur des grands projets", "Représentant du secteur privé"],
     },
@@ -42,7 +42,7 @@ export default function ProgrammePage() {
         "Ce panel se penchera sur les mécanismes de financement innovants et les modèles de PPP qui peuvent catalyser le développement des infrastructures en Guinée.",
       icon: <Landmark className="w-12 h-12" />,
       time: "14h00",
-      day: "05 juillet 2025",
+      day: "12 juillet 2025",
       moderator: "Expert financier",
       panelists: [
         "Représentant de la Banque Africaine de Développement",
@@ -57,7 +57,7 @@ export default function ProgrammePage() {
         "Ce panel mettra en lumière le rôle crucial du secteur privé guinéen dans le développement économique du pays, en explorant les défis auxquels il est confronté et les opportunités offertes par le programme Simandou 2040.",
       icon: <LightbulbIcon className="w-12 h-12" />,
       time: "15h30",
-      day: "05 juillet 2025",
+      day: "12 juillet 2025",
       moderator: "Représentant du patronat guinéen",
       panelists: [
         "Président de la Chambre de Commerce",
@@ -72,7 +72,7 @@ export default function ProgrammePage() {
         "Ce panel abordera les questions liées au développement des zones industrielles, à l'approvisionnement énergétique et à la transition vers une économie durable.",
       icon: <Truck className="w-12 h-12" />,
       time: "17h00",
-      day: "05 juillet 2025",
+      day: "12 juillet 2025",
       moderator: "Expert en développement durable",
       panelists: ["Ministre de l'Énergie", "Directeur des zones industrielles", "Expert en transition énergétique"],
     },
@@ -163,7 +163,7 @@ export default function ProgrammePage() {
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">PROGRAMME</h1>
           <p className="text-xl max-w-3xl mb-6">
-            Découvrez le programme détaillé du Salon Guinée Invest qui se tiendra le 05 juillet 2025 à l'hôtel NOOM de
+            Découvrez le programme détaillé du Salon Guinée Invest qui se tiendra le 12 juillet 2025 à l'hôtel NOOM de
             Conakry.
           </p>
         </div>
@@ -183,7 +183,7 @@ export default function ProgrammePage() {
                 <div className="lg:col-span-1">
                   <div className="sticky top-24">
                     <h2 className="section-title">PROGRAMME</h2>
-                    <p className="text-lg mb-8">05 juillet 2025</p>
+                    <p className="text-lg mb-8">12 juillet 2025</p>
 
                     <div className="space-y-6">
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">

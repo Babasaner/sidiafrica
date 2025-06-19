@@ -13,7 +13,6 @@ const navItems = [
   { name: "ACCUEIL", href: "/" },
   { name: "À PROPOS", href: "/a-propos" },
   { name: "PROGRAMME", href: "/programme" },
-  { name: "SIMANDOU 2040", href: "/simandou-2040" },
   { name: "EXPOSANTS", href: "/exposants" },
   { name: "ACTUALITES", href: "/actualites" },
   { name: "CONTACT", href: "/contact" },

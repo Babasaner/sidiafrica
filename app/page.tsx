@@ -74,7 +74,7 @@ export default function Home() {
               className="flex items-center justify-center gap-6 text-white"
             >
               <div className="text-center">
-                <p className="text-3xl md:text-4xl font-bold">05</p>
+                <p className="text-3xl md:text-4xl font-bold">12</p>
                 <p className="text-sm uppercase">Juillet 2025</p>
               </div>
               <div className="h-12 w-px bg-blue-400"></div>
@@ -129,7 +129,7 @@ export default function Home() {
                 <p className="text-lg text-gray-700 mb-8">
                   Dans ce contexte, Septafrique, leader de l'événementiel institutionnel en Afrique de l'Ouest, organise
                   le Salon Guinée Invest, une plateforme de rencontres, d'échanges et de promotion des opportunités
-                  d'investissement, le 05 juillet 2025 à l'hôtel NOOM de Conakry.
+                  d'investissement, le 12 juillet 2025 à l'hôtel NOOM de Conakry.
                 </p>
                 <Button asChild className="bg-blue-700 text-white hover:bg-blue-800">
                   <Link href="/a-propos">En savoir plus</Link>
