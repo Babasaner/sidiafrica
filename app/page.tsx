@@ -85,7 +85,16 @@ export default function MaintenancePage() {
             transition={{ delay: 1, duration: 0.6 }}
             className="bg-white/5 rounded-xl p-6 mb-8"
           >
-              
+            <h3 className="text-white font-semibold mb-4">Besoin d'informations urgentes ?</h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex items-center gap-2 text-blue-100">
+                <Mail className="w-4 h-4" />
+                
+              </div>
+              <div className="flex items-center gap-2 text-blue-100">
+                <Phone className="w-4 h-4" />
+                
+              </div>
             </div>
           </motion.div>
 
@@ -96,8 +105,10 @@ export default function MaintenancePage() {
             transition={{ delay: 1.2, duration: 0.6 }}
             className="border-t border-white/20 pt-6"
           >
-            
-            
+            <p className="text-blue-100 mb-4">
+              <strong className="text-yellow-400">Salon Guinée Invest 2025</strong>
+            </p>
+            <p className="text-blue-100">30 Mai 2025 • Hôtel NOOM, Conakry</p>
           </motion.div>
 
           {/* Loading Animation */}
@@ -134,7 +145,7 @@ export default function MaintenancePage() {
           transition={{ delay: 1.6, duration: 0.6 }}
           className="mt-8 text-center"
         >
-          <p className="text-blue-200 text-sm">© 2024 SIDI Invest Guinée. Tous droits réservés.</p>
+         
         </motion.div>
       </div>
     </div>
