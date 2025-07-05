@@ -99,17 +99,7 @@ export default function MaintenancePage() {
           </motion.div>
 
           {/* Event Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-            className="border-t border-white/20 pt-6"
-          >
-            <p className="text-blue-100 mb-4">
-              <strong className="text-yellow-400">Salon Guinée Invest 2025</strong>
-            </p>
-            <p className="text-blue-100">30 Mai 2025 • Hôtel NOOM, Conakry</p>
-          </motion.div>
+          
 
           {/* Loading Animation */}
           <motion.div
