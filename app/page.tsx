@@ -15,20 +15,7 @@ export default function MaintenancePage() {
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20"
         >
           {/* Logo */}
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="mb-8"
-          >
-            <Image
-              src="/gold-blue-abstract-logo.png"
-              alt="SIDI Invest Guinée"
-              width={200}
-              height={80}
-              className="mx-auto"
-            />
-          </motion.div>
+         
 
           {/* Maintenance Icon */}
           <motion.div
